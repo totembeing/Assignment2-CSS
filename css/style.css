@@ -16,13 +16,11 @@ body, html {
 
 header {
     height: 12vh;
-    border: 1px solid black;
     display: flex;
 
 }
 
 .logo {
-    border: 1px solid black;
     flex: 1;
     display: flex;
     align-items: center;
@@ -34,14 +32,12 @@ header {
 }
 
 nav {
-    border: 1px solid black;
     flex: 3;
     display: flex;
 }
 
 nav > menu {
     flex: 3;
-    border: 1px solid black;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -92,7 +88,6 @@ nav > menu > li > a:hover::before, #footerLinks > menu > li > a:hover::before {
 
 nav > .extras {
     flex: 1;
-    border: 1px solid black;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -126,7 +121,6 @@ nav > .extras > button:hover {
     height: 40vh;
     width: 100%;
     margin-top: 7em;
-    border: 1px solid black;
     display: flex;
     align-items: center;
     justify-content: center;
