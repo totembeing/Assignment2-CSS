@@ -1,0 +1,542 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/*Property to smoothen the scroll effect of webpage while using anchor tags to navigate between sections*/
+
+html {
+    scroll-behavior: smooth;
+}
+
+body, html {
+    height: 100%;
+}
+
+header {
+    height: 12vh;
+    border: 1px solid black;
+    display: flex;
+
+}
+
+.logo {
+    border: 1px solid black;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logoImage {
+    height: 80%;
+}
+
+nav {
+    border: 1px solid black;
+    flex: 3;
+    display: flex;
+}
+
+nav > menu {
+    flex: 3;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5em;
+}
+
+
+#footerLinks > menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2em;
+}
+
+/*Used the same anchor links structure in the footer as well as in the header navigation bar*/
+
+nav > menu > li, #footerLinks > menu > li {
+    list-style: none;
+}
+
+nav > menu > li > a, #footerLinks > menu > li > a {
+    text-decoration: none;
+    color: #4E0401;
+    font-family: monospace;
+    font-weight: 700;
+    font-size: 1.5em;
+    position: relative;
+}
+
+nav > menu > li > a::before, #footerLinks > menu > li > a::before {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #4E0401;
+    transform: scaleX(0);
+    transition: transform .3s ease;
+    transform-origin: left;
+}
+
+nav > menu > li > a:hover::before, #footerLinks > menu > li > a:hover::before {
+    transform: scaleX(1);
+}
+
+nav > .extras {
+    flex: 1;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav > .extras > button {
+    background-color: white;
+    color: #200093;
+    font-family: 'Bangers', sans-serif;
+    font-size: 1.5em;
+    height: 2em;
+    width: 5.5em;
+    transform: skewX(-15deg);
+    border-top-left-radius: 1em;
+    border-bottom-right-radius: 1em;
+    border-color:#FE0003;
+    border-width: .5em;
+    box-shadow: 5px 5px #4E0401;
+    transition: .2s ease-in-out;
+    cursor: pointer;
+    letter-spacing: .06em;
+}
+
+nav > .extras > button:hover {
+    background-color: #200093;
+    color: white;
+    transition: .2s ease-in-out;
+}
+
+#mastHead {
+    height: 40vh;
+    width: 100%;
+    margin-top: 7em;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+#mastHeadMainImg {
+    animation: slide-in-top 1.5s;
+    animation-timing-function: ease-out;
+    z-index: 100;
+    height: 20em;
+    width: auto;
+}
+
+#mastHeadSubImg1 {
+    position: absolute;
+    left: 5em;
+    height: 20em;
+    width: auto;
+    animation: slide-in-left 1.5s;
+    animation-timing-function: ease-out;
+}
+
+#mastHeadSubImg2 {
+    position: absolute;
+    right: 5em;
+    height: 20em;
+    width: auto;
+    animation: slide-in-right 1.5s;
+    animation-timing-function: ease-out;
+}
+
+#handImageLeft {
+    position: absolute;
+    top: -3em;
+    left: 20em;
+    animation: slide-in-bottom-left 1.5s;
+    animation-timing-function: ease-out;
+}
+
+#handImageRight {
+    position: absolute;
+    top: -3em;
+    right: 20em;
+    animation: slide-in-bottom-right 1.5s;
+    animation-timing-function: ease-out;
+}
+
+/*About Us Section -------------------------------------*/
+
+#aboutUs {
+    height: 160vh;
+    max-width: 60%;
+    margin-top: 16em;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 1em;
+    text-align: center;
+}
+
+#aboutUsHeader {
+    height: 5em;
+}
+
+#aboutUsHeader > p, #productsHeader > p{
+    font-family: 'Gabarito', sans-serif;
+    font-size: 3em;
+    font-weight: 900;
+    color: #4E0401;
+}
+
+#aboutUs::after {
+    content: '';
+    display: block;
+    width: 2px;
+    height: 92.5%;
+    position: absolute;
+    background-color: #4E0401;
+    top: 5em;
+    left: 50%;
+}
+
+.container {
+    padding: 10px 50px;
+    position: relative;
+    width: 50%;
+    border-radius: 5em;
+    height: 14.2%;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Gabarito', sans-serif;
+    gap: 1em;
+}
+
+.year {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 2em;
+    font-weight: 900;
+    color: #200093;
+}
+
+.yearContent {
+    flex: 3;
+    font-weight: 900;
+    font-size: 1.2em;
+    color: #4E0401;
+}
+
+.leftContainer {
+    left: -5%;
+}
+
+.leftContainer::after {
+    content: '';
+    position: absolute;
+    width: 2.5em;
+    height: 2px;
+    background-color: #4E0401;
+    top: 50%;
+    left: 101%;
+}
+
+.rightContainer {
+    left: 55%;
+}
+
+.rightContainer::before {
+    content: '';
+    position: absolute;
+    width: 2.5em;
+    height: 2px;
+    background-color: #4E0401;
+    top: 50%;
+    right: 100.5%;
+}
+
+/*Products Section -----------------------------*/
+
+#products {
+    height: 100vh;
+    margin-top: 10em;
+    text-align: center;
+    padding: 5em;
+}
+
+#productGrid {
+    display: grid;
+    height: 50em;
+    margin-top: 3em;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 2em;
+}
+
+.gridContainer {
+    display: flex;
+    flex-direction: column;
+    background-color: #4E0401;
+    border-radius: 1em;
+}
+
+.productImg {
+    flex: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.productImg > img {
+    height: auto;
+    width: 70%;
+}
+
+.buyProduct {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.buyProduct > button {
+    background-color: #200093;
+    width: 40%;
+    height: 50%;
+    font-size: 1.5em;
+    font-family: monospace;
+    font-weight: 900;
+    border-radius: 1em;
+    border: transparent;
+    color: white;
+    transition: .5s ease-out;
+}
+
+.buyProduct > button:hover {
+    color: #200093;
+    background-color: white;
+    transition: .5s ease-out;
+}
+
+
+/*Footer--------------------------------------*/
+
+#contact {
+    height: 40vh;
+    margin-top: 20em;
+    display: flex;
+    border-top: .5em solid #4E0401;
+}
+
+#footerLogo {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-right: .5em solid #4E0401;
+}
+
+#footerLogo > img {
+    height: 7em;
+}
+
+#footerLinks {
+    flex: .6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-right: .5em solid #4E0401;
+}
+
+form {
+    flex: 1.5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    flex-direction: column;
+}
+
+form > p {
+    width: 80%;
+}
+
+form > p > input, form > p > textarea {
+    width: 100%;
+    border: 2px solid #4E0401;
+    border-radius: 5px;
+    padding: 15px 5px;
+}
+
+form > p > input[type='submit'] {
+    font-size: 1.5em;
+    width: 50%;
+    background-color: #4E0401;
+    color: white;
+    font-family: 'Gabarito', sans-serif;
+    letter-spacing: .1em;
+    transition: .5s ease-out;
+    cursor: pointer;
+}
+
+/*Keyframe animation*/
+
+
+/*Keyframe animation for the main snicker bar*/
+@keyframes slide-in-top {
+    from {
+        transform: translateY(-5000px);
+    }
+
+    to {
+        transform: translateY(0px);
+    }
+}
+
+
+/*Keyframe animations for small snicker candies on the side*/
+@keyframes slide-in-left {
+    from {
+        transform: translateX(-5000px);
+        rotate: -150deg;
+    }    
+
+    to {
+        transform: translateX(0px);
+    }
+}
+
+@keyframes slide-in-right {
+    from {
+        transform: translateX(5000px);
+        rotate: -150deg;
+    }    
+
+    to {
+        transform: translateX(0px);
+    }
+}
+
+
+/*Keyframe animation for the hand, each coming from it's respective side*/
+@keyframes slide-in-bottom-right {
+    from {
+        transform: translateX(5000px);
+        rotate: 150deg;
+    }
+}
+
+@keyframes slide-in-bottom-left {
+    from {
+        transform: translateX(-5000px);
+        rotate: -150deg;
+    }
+}
+
+/*Responsiveness for following viewports:
+1. 1440px
+2. 1024px
+3. 768px*/
+
+@media screen and (max-width: 1440px) {
+    #mastHeadSubImg1, #mastHeadSubImg2 {
+        height: 25em;
+    }
+
+    #mastHeadSubImg1 {
+        left: 3em;
+    }
+
+    #mastHeadSubImg2 {
+        right: 3em;
+    }
+
+    #handImageLeft, #handImageRight {
+        top: 0em;
+    }
+
+}
+
+@media screen and (max-width: 1024px) {
+
+    nav > menu {
+        gap: 2.5em;
+    }
+
+    nav > menu > li > a {
+        font-size: 1em;
+    }
+
+    nav > .extras > button {
+        font-size: 1.1em;
+    }
+
+    #mastHeadMainImg {
+        height: 17em;
+    }
+
+    #mastHeadSubImg1, #mastHeadSubImg2 {
+        height: 15em;
+    }
+
+    #mastHeadSubImg1 {
+        left: 3em;
+    }
+
+    #mastHeadSubImg2 {
+        right: 3em;
+    }
+
+    #handImageLeft {
+        left: 7em;
+    }
+
+    #handImageRight {
+        right: 7em;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+
+    .logo {
+        flex: 1.2;
+    }
+
+    nav > menu {
+        gap: 2em;
+    }
+
+    nav > .extras > button {
+        font-size: .8em;
+    }
+
+    #mastHead {
+        margin-top: 5em;
+    }
+
+    #mastHeadMainImg {
+        height: 12em;
+    }
+
+    #mastHeadSubImg1, #mastHeadSubImg2 {
+        height: 9em;
+    }
+
+    #handImageLeft, #handImageRight {
+        height: 20em;
+    }
+
+}

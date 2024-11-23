@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snickers</title>
+    <meta name="description" content="Front-end for your favorite candy">
+    <meta name="robots" content="noindex, nofollow">
+
+    <!--CSS file-->
+    <link rel="stylesheet" href="./css/style.css">
+
+    <!--Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Gabarito:wght@400..900&family=Nosifer&family=Sedgwick+Ave+Display&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    
+    <header>
+        <div class="logo">
+            <img src="./images/snickersLogo2.png" alt="" class="logoImage">
+        </div>
+        <nav>
+            <menu>
+                <!--Nav links will be used to navigate to different section on the same webpage-->
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="#aboutUs">About Us</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </menu>
+            <div class="extras">
+                <button>Buy Now</button>
+            </div>
+        </nav>
+    </header>
+
+    <!--Masthead includes a bunch of keyframe animations-->
+    <div id="mastHead">
+        <img src="./images/Snickers-Bar-Courtesy-Mars-Inc-JMedit-removebg-preview.png" alt="" id="mastHeadMainImg">
+        <img src="./images/snickers-removebg-preview.png" alt="" id="mastHeadSubImg1">
+        <img src="./images/snickers-removebg-preview.png" alt="" id="mastHeadSubImg2">
+        <img src="./images/hand-left.png" alt="" id="handImageLeft">
+        <img src="./images/hand-right.png" alt="" id="handImageRight">
+    </div>
+
+    <!--About Us page includes a brief timeline of the Snicker Chocolate Bar company-->
+    <section id="aboutUs">
+        <div id="aboutUsHeader">
+            <p>ABOUT US</p>
+        </div>
+        <div class="container leftContainer">
+            <p class="year">1930</p>
+            <p class="yearContent">The Very first SNICKERS Bar, allegedly named after a horse, was manufactured in Chicago and sold for five cents.</p>
+        </div>
+        <div class="container rightContainer">
+            <p class="year">1967-1990</p>
+            <p class="yearContent">SNICKERS is called the Marathon Bar in the UK.</p>
+        </div>
+        <div class="container leftContainer">
+            <p class="year">1968</p>
+            <p class="yearContent">Fun Size SNICKERS is created, followed by an increase in satisfaction levels worldwide.</p>
+        </div>
+        <div class="container rightContainer">
+            <p class="year">1984</p>
+            <p class="yearContent">SNICKERS is an official sponsor of the 1984 LA Olympic Games. We take home gold in every non-sport event.</p>
+        </div>
+        <div class="container leftContainer">
+            <p class="year">1989</p>
+            <p class="yearContent">The SNICKERS Ice Cream Bar is introduced. We are forever changed.</p>
+        </div>
+        <div class="container rightContainer">
+            <p class="year">2010</p>
+            <p class="yearContent">The award-winning “You’re not you when you’re hungry” campaign is created and celebrated.</p>
+        </div>
+        <div class="container leftContainer">
+            <p class="year">2013</p>
+            <p class="yearContent">SNICKERS passes $1 Billion in sales in the US.</p>
+        </div>
+    </section>
+
+    <!--Products section showcases some of the best sellers from the company-->
+    <section id="products">
+        <div id="productsHeader">
+            <p>THE WHOLE FAMILY</p>
+        </div>
+
+        <!--To showcase the best selling products, I have used a grid because it is more convenient than flex if we are displaying content in 2 dimensions-->
+        <div id="productGrid">
+            <div class="gridContainer">
+                <div class="productImg"><img src="./images/product1-removebg-preview.png" alt=""></div>
+                <div class="buyProduct"><button>BUY</button></div>
+            </div>
+            <div class="gridContainer">
+                <div class="productImg"><img src="./images/product2-removebg-preview.png" alt=""></div>
+                <div class="buyProduct"><button>BUY</button></div>
+            </div>
+            <div class="gridContainer">
+                <div class="productImg"><img src="./images/product3-removebg-preview.png" alt=""></div>
+                <div class="buyProduct"><button>BUY</button></div>
+            </div>
+            <div class="gridContainer">
+                <div class="productImg"><img src="./images/product4-removebg-preview.png" alt=""></div>
+                <div class="buyProduct"><button>BUY</button></div>
+            </div>
+            <div class="gridContainer">
+                <div class="productImg"><img src="./images/product5-removebg-preview.png" alt=""></div>
+                <div class="buyProduct"><button>BUY</button></div>
+            </div>
+            <div class="gridContainer">
+                <div class="productImg"><img src="./images/product6-removebg-preview.png" alt=""></div>
+                <div class="buyProduct"><button>BUY</button></div>
+            </div>
+        </div>
+    </section>
+    <footer id="contact">
+        <div id="footerLogo"><img src="./images/snickersLogo2.png" alt="" class="logoImage"></div>
+        <div id="footerLinks">
+            <menu>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="#aboutUs">About Us</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </menu>
+        </div>
+
+        <!--Contact form will have three input fields:
+            1. For the name
+            2. For the email
+            3. For any feedback, collected using textarea-->
+        <form action="post" action="somefile">
+            <p><input type="text" placeholder="Your Name" name="name"></p>
+            <p><input type="email" placeholder="Your Email" name="email"></p>
+            <p><textarea name="message" placeholder="Leave a message ..."></textarea></p>
+            <p><input type="submit" name="submit" value="Send"></p>
+        </form>
+    </footer>
+</body>
+</html>
